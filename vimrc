@@ -26,14 +26,14 @@ set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 
 "Vertical split then hop to new buffer
-:noremap ,v :vsp^M^W^W<CR>
-:noremap ,h :split^M^W^W<CR>
-:noremap ,n :NERDTreeToggle<CR>
-:noremap ,i :set list!<CR> " Toggle invisible chars
+:noremap <Leader>v :vsp^M^W^W<CR>
+:noremap <Leader>h :split^M^W^W<CR>
+:noremap <Leader>n :NERDTreeToggle<CR>
+:noremap <Leader>i :set list!<CR> " Toggle invisible chars
 map <F5> :!ruby %<CR>
-map ,t :CommandT<CR>
-map ,f :FuzzyFinderTextMate<CR>
-map ,b :FuzzyFinderBuffer<CR>
+map <Leader>t :CommandT<CR>
+map <Leader>f :FuzzyFinderTextMate<CR>
+map <Leader>b :FuzzyFinderBuffer<CR>
 
 set background=dark 
 syntax on " syntax highlighting
