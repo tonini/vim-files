@@ -25,6 +25,8 @@ set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching 
 set smartcase " Ignore case when searching lowercase
 
+let mapleader = ","
+
 "Vertical split then hop to new buffer
 :noremap <Leader>v :vsp^M^W^W<CR>
 :noremap <Leader>h :split^M^W^W<CR>
