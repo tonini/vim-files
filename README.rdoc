@@ -1,3 +1,9 @@
 = My VIM Files
 
 I just needed a place to put it safe...;)
+
+== Installation
+
+  git clone git@github.com:zastav/vim-files.git ~/.vim
+  cd ~/.vim
+  rake install
