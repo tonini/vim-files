@@ -1,7 +1,7 @@
 if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz 
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
   set guioptions-=T  
   set stal=2 
 
