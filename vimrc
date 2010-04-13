@@ -2,6 +2,7 @@ call pathogen#runtime_append_all_bundles()
 
 filetype off
 
+set anti
 set nocompatible
 set noswapfile
 set softtabstop=2
@@ -34,9 +35,37 @@ set vb t_vb=
 set listchars=trail:.,tab:>-,eol:$
 set nolist
 
-colorscheme ir_black
+" colorscheme desert
 syntax on
-match LongLineWarning '\%120v.*'
+
+function! Gui_settings()
+  "some default settings for vim gui version
+  set fuoptions=maxvert,maxhorz
+  set columns=200
+  set lines=70
+  set gtl=%t gtt=%F
+  colorscheme ir_black
+endfunction
+
+if has("gui_macvim")
+  call Gui_settings()
+  "set fuoptions=maxvert,maxhorz 
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+  set guioptions-=T  
+  set stal=2 
+elseif has("gui_gtk")
+  call Gui_settings()
+  set guifont=Monaco
+  set guioptions-=T
+elseif has("x11")
+  call Gui_settings()
+elseif has("gui_win32")
+  call Gui_settings()
+else
+  colorscheme desert
+end
+
+
 filetype plugin indent on
 
 let mapleader = ","

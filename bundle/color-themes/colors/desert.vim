@@ -23,6 +23,7 @@ hi Normal	guifg=White guibg=grey20
 
 " highlight groups
 hi Cursor	guibg=khaki guifg=slategrey
+hi clear CursorLine
 "hi CursorIM	
 "hi Directory	
 "hi DiffAdd				
@@ -74,7 +75,7 @@ hi IncSearch     cterm=NONE ctermfg=yellow ctermbg=green
 hi Search        cterm=NONE ctermfg=grey ctermbg=blue
 hi MoreMsg       ctermfg=darkgreen
 hi ModeMsg       cterm=NONE ctermfg=brown
-hi LineNr        ctermfg=3
+hi LineNr        ctermfg=lightgray
 hi Question      ctermfg=green
 hi StatusLine    cterm=bold,reverse
 hi StatusLineNC  cterm=reverse
