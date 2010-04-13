@@ -3,6 +3,7 @@ require 'rake'
 desc "create symlinks for the vim config file"
 task :symlinks do
   puts "\033[92mcreate symlinks for the vim config file\003[0m"
+  # strange to use that code for one file, but it's made for the future. ;)
   ["vimrc"].each do |file|
     if File.exist?(File.join(ENV['HOME'],".#{file}"))
       print "\033[91mfile already exist, overwrite ~/.#{file}?\033[0m \033[92m[ynq]\033[0m"
