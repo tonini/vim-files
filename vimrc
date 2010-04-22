@@ -35,7 +35,6 @@ set vb t_vb=
 set listchars=trail:.,tab:>-,eol:$
 set nolist
 
-" colorscheme desert
 syntax on
 
 function! Gui_settings()
@@ -65,13 +64,18 @@ else
   colorscheme desert
 end
 
-
 filetype plugin indent on
 
 let mapleader = ","
 let NERDTreeHijackNetrw=1
 let g:AutoComplPop_IgnoreCaseOption = 0
 let g:AutoComplPop_BehaviorKeywordLength = 2
+
+function! RubyTagJumper()
+  execute "set iskeyword+=:"
+  execute "normal g]" 
+  execute "set iskeyword-=:"
+endfunction
 
 map <Leader>v :vsp^M^W^W<CR>
 map <Leader>h :split^M^W^W<CR>
@@ -80,8 +84,7 @@ map <Leader>i :set list!<CR>
 map <Leader>j :tjump<CR>
 map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
-map <Leader>f :FuzzyFinderTextMate<CR>
-map <Leader>b :FuzzyFinderBuffer<CR>
+map <Leader>g :call RubyTagJumper()<CR>
 
 map <up> gk
 map k gk
