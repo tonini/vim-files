@@ -35,6 +35,9 @@ set vb t_vb=
 set listchars=trail:.,tab:>-,eol:$
 set nolist
 
+" Use _ as a word-separator
+set iskeyword-=_
+
 syntax on
 
 function! Gui_settings()
@@ -85,6 +88,10 @@ map <Leader>j :tjump<CR>
 map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
 map <Leader>g :call RubyTagJumper()<CR>
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 
 map <up> gk
 map k gk
