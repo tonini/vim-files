@@ -52,7 +52,7 @@ endfunction
 if has("gui_macvim")
   call Gui_settings()
   "set fuoptions=maxvert,maxhorz 
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h14
   set guioptions-=T  
   set stal=2 
 elseif has("gui_gtk")
