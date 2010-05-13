@@ -35,9 +35,6 @@ set vb t_vb=
 set listchars=trail:.,tab:>-,eol:$
 set nolist
 
-" Use _ as a word-separator
-set iskeyword-=_
-
 syntax on
 
 function! Gui_settings()
