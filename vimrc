@@ -43,7 +43,7 @@ function! Gui_settings()
   set columns=200
   set lines=70
   set gtl=%t gtt=%F
-  colorscheme ir_black
+  colorscheme railscasts
 endfunction
 
 if has("gui_macvim")
