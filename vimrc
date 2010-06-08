@@ -85,6 +85,7 @@ map <Leader>j :tjump<CR>
 map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
 map <Leader>g :call RubyTagJumper()<CR>
+map <Leader>co :TComment<CR>
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
