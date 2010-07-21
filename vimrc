@@ -43,13 +43,13 @@ function! Gui_settings()
   set columns=200
   set lines=70
   set gtl=%t gtt=%F
-  colorscheme railscasts
+  colorscheme ir_black
 endfunction
 
 if has("gui_macvim")
   call Gui_settings()
-  "set fuoptions=maxvert,maxhorz 
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+  set fuoptions=maxvert,maxhorz 
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h15
   set guioptions-=T  
   set stal=2 
 elseif has("gui_gtk")
@@ -61,7 +61,7 @@ elseif has("x11")
 elseif has("gui_win32")
   call Gui_settings()
 else
-  colorscheme desert
+  colorscheme railscasts
 end
 
 filetype plugin indent on
