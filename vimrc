@@ -34,8 +34,13 @@ set matchpairs+=<:>
 set vb t_vb=
 set listchars=trail:.,tab:>-,eol:$
 set nolist
+set statusline=%<\ %n:%f\ %{fugitive#statusline()}\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 syntax on
+
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 function! Gui_settings()
   "some default settings for vim gui version
@@ -49,9 +54,10 @@ endfunction
 if has("gui_macvim")
   call Gui_settings()
   set fuoptions=maxvert,maxhorz 
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h15
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h14
   set guioptions-=T  
   set stal=2 
+  set fullscreen
 elseif has("gui_gtk")
   call Gui_settings()
   set guifont=Monaco
@@ -86,10 +92,7 @@ map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
 map <Leader>g :call RubyTagJumper()<CR>
 map <Leader>co :TComment<CR>
-
-" Edit another file in the same directory as the current file
-" uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>b :FufBuffer<CR>
 
 map <up> gk
 map k gk
