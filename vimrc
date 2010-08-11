@@ -92,7 +92,7 @@ map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
 map <Leader>g :call RubyTagJumper()<CR>
 map <Leader>co :TComment<CR>
-map <Leader>b :FufBuffer<CR>
+map <Leader>1 :on<CR>
 
 map <up> gk
 map k gk
